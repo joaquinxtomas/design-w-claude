@@ -1,14 +1,15 @@
 ---
 name: design-piece
 description: >
-  This skill should be used when the user asks to "design a story", "make a post", "create a flyer",
-  "an Instagram piece", "recreate this design with another photo", "make this week's stories",
-  "variations of this piece", or any brand graphic design request (also in Spanish: "diseñá una
-  historia", "hacé un post", "armá un flyer"). It takes a short brief, uses brand.md, designs the
-  piece and delivers it as a PNG, a layered PSD, a Photoshop .jsx script with editable text, or a
-  Figma frame.
+  This skill should be used whenever the user asks for a graphic piece for a brand: "design a story",
+  "Instagram story", "make a post", "create a flyer", "a banner", "recreate this design with another
+  photo", "make this week's stories", "variations of this piece", "deliver PNG and PSD", "PSD with
+  layers"; in Spanish: "diseñá una historia", "armá una historia", "hacé un post", "armá un flyer",
+  "entregá PNG y PSD". Load it before designing any such piece, instead of improvising. It takes a
+  short brief, uses the brand's design system (or brand.md), designs the piece and delivers a PNG
+  plus a layered PSD, a Photoshop .jsx script with editable text, or a Figma frame.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Design a piece
@@ -19,7 +20,8 @@ Always reply in the user's language (the original user writes in Spanish).
 
 ## 1. Load context
 
-- Look for brand.md in the Project or working folder. If it does not exist and the brand is unclear, offer to run the brand-setup skill; if the user wants to move on anyway, work with what was given and note assumptions.
+- Find the brand, in this order: the brand's Design System artifact (list the user's artifacts and read its tokens, fonts, logos and README), then brand.md in the Project or connected folder. If neither exists and the brand is unclear, offer to run the brand-setup skill; if the user wants to move on anyway, work with what was given and note assumptions.
+- Reuse the brand's own font files and logo assets when the design system has them; never substitute a different font silently.
 - If the request names a saved style ("closed notice"), apply it as is.
 - Never ask the user to re-upload what is already in the Project.
 
@@ -40,11 +42,12 @@ Keep quoted text exactly as written. If there is no reference or style and the r
 
 ## 3. Design
 
-- Compose on a 1080 px-wide canvas, respecting the safe zone and margins from brand.md.
+- Compose on a 1080 px-wide canvas, respecting the safe zone and margins from the design system or brand.md.
 - Keep text legible over photos: a darkening layer or gradient behind the text, a subtle shadow if needed.
-- Use the real font when the file is available; otherwise the fallback from brand.md for the preview, and the real name in scripts and Figma.
+- Use the real font when the file is available; otherwise the fallback recorded with the brand for the preview, and the real name in scripts and Figma.
 - Put each element on its own clearly named layer (Photo, Darken, Headline, Subhead, Logo, Call to action).
-- Techniques and code: see `references/delivery-formats.md` and `scripts/build_psd.py`.
+- Check the input photo: if it is smaller than the canvas, say so and ask for the original; flag third-party logos or text visible in it.
+- Techniques and code: see `references/delivery-formats.md` and `scripts/build_psd.py`. Rendering layers from HTML with a headless browser is also fine when it gives better typography; the deliverables stay the same.
 
 ## 4. Review before delivering
 
@@ -52,7 +55,7 @@ Look at the rendered preview and fix issues before showing it. Checklist in `ref
 
 ## 5. Deliver
 
-Always deliver the PNG preview plus the requested format:
+Always deliver the PNG preview plus the requested format. **Whenever a PSD is delivered, also deliver the .jsx script that adds the text as real, editable text layers on top of it** (same fonts, sizes and positions), because PSD text written outside Photoshop is pixels. Do not just tell the user the text is not editable: give them the script.
 
 | Delivery | When |
 | --- | --- |
@@ -69,7 +72,7 @@ For Figma: ask for the file link, get the photos into the file before designing,
 
 - Ask for concrete notes and apply them all together ("headline 20% smaller, less darkening on the photo").
 - Change only what was asked; do not rebuild the whole piece.
-- Once approved, offer to save it as a style in brand.md (brand-setup skill).
+- Once approved, offer to save it as a named style in the brand's design system or brand.md (brand-setup skill). Mention this in one line at the end of the first delivery, too.
 
 ## Batch production
 

@@ -6,8 +6,9 @@ description: >
   "a typeface inspired by…", "no reference, but it should convey…" (also in Spanish: "quiero esta
   textura", "inspirado en…"). It turns ideas (textures, materials, eras, artists, feelings) into a
   concrete design direction, gets it approved, and only then designs with the design-piece skill.
+  Load it before designing anything that starts from an idea rather than a reference.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Design from ideas
@@ -55,7 +56,7 @@ Hand over to the design-piece skill with the direction as the style, to build, r
 
 ## 5. Save the direction
 
-If the user approves the result, offer to save it as a named style in brand.md ("fresco style") using the brand-setup skill.
+If the user approves the result, offer to save it as a named style in the brand's design system or brand.md ("fresco style") using the brand-setup skill.
 
 ## Limits
 

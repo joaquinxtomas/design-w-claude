@@ -21,19 +21,21 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 
 | Say something like | What happens |
 | --- | --- |
-| "Set up the brand for Café Lumbre" + logo, colors, fonts, references | Creates a `brand.md` with everything about the brand |
-| "Design a story: text 'OPEN LATE TODAY', photo attached, deliver PNG + PSD" | Designs, reviews and delivers the piece |
+| "Set up the brand for Café Lumbre" + logo, colors, fonts, references | Builds the brand's design system (colors, fonts, logos, voice) inside Claude |
+| "Design a story: text 'OPEN LATE TODAY', photo attached, deliver PNG + PSD" | Designs, reviews and delivers PNG + layered PSD + a `.jsx` that makes the text editable |
 | "Headline smaller, less darkening on the photo" | Applies only those changes |
 | "Save this as the 'opening hours' style" | Next time one line is enough |
 | "I want a story inspired by 70s movie posters" | Proposes a design direction first, then designs |
 
-Tip: create one Claude **Project per client** and keep `brand.md`, the logo and fonts in its files.
+Tips:
+- Create one Claude **Project per client**.
+- To force a skill, start your message with it: `/brand-setup`, `/design-piece` or `/design-from-ideas`.
 
 ## What's inside
 
 | Skill | Purpose |
 | --- | --- |
-| `brand-setup` | Brand kit (logo, fonts, colors, tone, references) and saved styles |
+| `brand-setup` | Brand kit as a Design System artifact (or `brand.md`): logo, fonts, colors, tone, saved styles |
 | `design-piece` | From brief to piece: PNG, layered PSD, Photoshop `.jsx` with editable text, or Figma frame |
 | `design-from-ideas` | No exact reference: turns textures, eras, artists or feelings into a design direction |
 
@@ -48,7 +50,12 @@ Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, f
 3. Buscá **design-with-claude** y tocá **Instalar**.
 4. Recomendado: en **Configuración → Conectores**, conectá **Figma** y **Adobe** con tus cuentas.
 
-Después, hablale normal y en español: "configurá la marca de [cliente]", "diseñá una historia con este texto y esta foto", "quiero una historia inspirada en…". Las actualizaciones llegan solas.
+Después, hablale normal y en español: "configurá la marca de [cliente]", "diseñá una historia con este texto y esta foto", "quiero una historia inspirada en…". Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-piece` (o `/brand-setup`, `/design-from-ideas`). Las actualizaciones llegan solas.
+
+## Changelog
+
+- **0.2.0** — Brand kit lives in Claude's Design System artifact when available (brand.md as fallback); `design-piece` reads fonts and logos from it, always ships the `.jsx` for editable text with a PSD, and flags low-resolution or third-party content in photos; stronger skill triggers (English and Spanish).
+- **0.1.0** — First version: brand setup, piece design (PNG/PSD/jsx/Figma), design from ideas, Figma and Adobe connectors.
 
 ## License
 
