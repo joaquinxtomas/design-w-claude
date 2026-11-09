@@ -29,7 +29,7 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 
 Tips:
 - Create one Claude **Project per client**.
-- To force a skill, start your message with it: `/brand-setup`, `/design-piece` or `/design-from-ideas`.
+- To force a skill, start your message with it: `/design-with-claude:brand-setup`, `/design-with-claude:design-piece` or `/design-with-claude:design-from-ideas` (type `/` and pick it from the list).
 
 ## What's inside
 
@@ -50,7 +50,7 @@ Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, f
 3. Buscá **design-with-claude** y tocá **Instalar**.
 4. Recomendado: en **Configuración → Conectores**, conectá **Figma** y **Adobe** con tus cuentas.
 
-Después, hablale normal y en español: "configurá la marca de [cliente]", "diseñá una historia con este texto y esta foto", "quiero una historia inspirada en…". Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-piece` (o `/brand-setup`, `/design-from-ideas`). Las actualizaciones llegan solas.
+Después, hablale normal y en español: "configurá la marca de [cliente]", "diseñá una historia con este texto y esta foto", "quiero una historia inspirada en…". Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-with-claude:design-piece` (o `:brand-setup`, `:design-from-ideas`; escribí `/` y elegilo de la lista). Las actualizaciones llegan solas.
 
 ## Changelog
 
