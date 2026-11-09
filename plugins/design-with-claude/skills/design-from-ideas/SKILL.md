@@ -8,7 +8,7 @@ description: >
   concrete design direction, gets it approved, and only then designs with the design-piece skill.
   Load it before designing anything that starts from an idea rather than a reference.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Design from ideas
@@ -49,6 +49,7 @@ See `references/example-michelangelo.md` for a complete case.
 - With the direction approved, make 2 or 3 different sketches only if the user asked for them; otherwise one.
 - If available, lean on Anthropic's skills: theme-factory (palette + font pairing), canvas-design (exploratory pieces), algorithmic-art (original textures and backgrounds).
 - Generate textures with code (noise, cracks, grain) instead of copying other people's images.
+- If the Marketing plugin is installed and the piece has no final copy, draft it with its brand-voice skill so words and look come from the same idea.
 
 ## 4. Design and deliver
 

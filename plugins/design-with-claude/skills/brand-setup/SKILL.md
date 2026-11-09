@@ -9,7 +9,7 @@ description: >
   fonts, colors, tone and references, records them in the session's Design System artifact (or a
   brand.md file), and saves approved styles so later pieces take one line.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Brand setup
@@ -30,6 +30,14 @@ Ask for anything missing in a single, plain-language message. Do not block work 
 | References | 3 to 5 pieces that already worked | Switch to the design-from-ideas skill |
 | Photos | Real brand photos in good resolution | Use free stock (Unsplash) and say so |
 | Tone | 4 or 5 lines | Propose a tone from the references and confirm it |
+
+## Companion plugins
+
+- **Marketing installed:** use its brand-voice skill to write the voice and tone section (and its guidelines file if it creates one), so copy and design share one voice.
+- **Adobe installed:** use it to suggest licensed fonts and to clean up the logo or reference photos.
+- **Theme-factory available:** use it to propose palette and font pairings when the brand has none.
+
+Match skills by purpose, never require them, and see `../design-piece/references/companion-plugins.md` for the full flow.
 
 ## 2. Analyze the references
 

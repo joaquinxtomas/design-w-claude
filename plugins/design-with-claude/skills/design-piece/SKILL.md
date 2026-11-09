@@ -9,7 +9,7 @@ description: >
   short brief, uses the brand's design system (or brand.md), designs the piece and delivers a PNG
   plus a layered PSD, a Photoshop .jsx script with editable text, or a Figma frame.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Design a piece
@@ -40,6 +40,10 @@ Delivery: PNG + PSD (default), .jsx script, Figma
 
 Keep quoted text exactly as written. If there is no reference or style and the request is an idea ("I want this texture", "inspired by…"), switch to the design-from-ideas skill.
 
+## Use the companion plugins
+
+When Marketing, Design, Adobe or Figma plugins/connectors are installed, use them for their part of the flow: copy in the brand's voice (Marketing), photo prep and per-channel variants (Adobe), critique before delivery (Design), native build (Figma). Match skills by purpose, never require them, and say in one line which one was used. Full flow and mapping: `references/companion-plugins.md`.
+
 ## 3. Design
 
 - Compose on a 1080 px-wide canvas, respecting the safe zone and margins from the design system or brand.md.
@@ -51,7 +55,7 @@ Keep quoted text exactly as written. If there is no reference or style and the r
 
 ## 4. Review before delivering
 
-Look at the rendered preview and fix issues before showing it. Checklist in `references/review-checklist.md`: text overflowing its box, accents colliding with the line above, poor contrast, elements outside the safe zone, text that differs from the request.
+Look at the rendered preview and fix issues before showing it. Checklist in `references/review-checklist.md`: text overflowing its box, accents colliding with the line above, poor contrast, elements outside the safe zone, text that differs from the request. If a design-critique skill is available (Design plugin), run it on the preview and fix what it finds before delivering.
 
 ## 5. Deliver
 
@@ -76,7 +80,7 @@ For Figma: ask for the file link, get the photos into the file before designing,
 
 ## Batch production
 
-For "this week's 5 stories": confirm the text and photo for each in a table, design one first, get it approved, then produce the rest in the same style (one .jsx script that creates them all, or one frame per piece in Figma).
+For "this week's 5 stories": if the Marketing plugin is installed, use its planning or drafting skills to propose the list and the copy in the brand's voice. Confirm the text and photo for each in a table, design one first, get it approved, then produce the rest in the same style (one .jsx script that creates them all, or one frame per piece in Figma). After approval, offer per-channel versions with Adobe.
 
 ## Adobe connector (around the design)
 

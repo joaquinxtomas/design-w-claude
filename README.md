@@ -13,7 +13,22 @@ You need a paid Claude plan (Pro, Max, Team or Enterprise).
 3. Find **design-with-claude** in the list and click **Install**.
 4. Optional but recommended: in **Settings → Connectors**, connect **Figma** and **Adobe** and sign in with your own accounts.
 
-Updates arrive automatically when this repository changes.
+Turn on **Sync automatically** on the marketplace so updates arrive on their own.
+
+## Recommended companion plugins
+
+This plugin is the glue; these do specialized parts and it uses them automatically when they are installed (none is required):
+
+| Plugin | Where | What it adds to the flow |
+| --- | --- | --- |
+| **Marketing** (Anthropic) | Customize → Plugins → Discover | Copy in the brand's voice, campaign and weekly planning |
+| **Design** (Anthropic) | Customize → Plugins → Discover | Critique of the piece before delivery (hierarchy, contrast) |
+| **Adobe for creativity** | Customize → Plugins → Discover (or the Adobe connector) | Photo prep, licensed fonts, per-channel versions |
+| **Figma** | Settings → Connectors | Build pieces natively in your Figma file |
+
+### How it all fits
+
+Brand (design system + voice) → plan the week (Marketing) → copy (Marketing) → photos (Adobe) → design (this plugin) → critique (Design) → PNG + PSD + .jsx or Figma → other formats (Adobe) → save the style.
 
 ## Use
 
@@ -48,12 +63,13 @@ Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, f
 1. En Claude (web o app de escritorio), andá a **Personalizar → Plugins**.
 2. Tocá **Add marketplace** y pegá: `joaquinxtomas/design-w-claude`
 3. Buscá **design-with-claude** y tocá **Instalar**.
-4. Recomendado: en **Configuración → Conectores**, conectá **Figma** y **Adobe** con tus cuentas.
+4. Recomendado: instalá también los plugins **Marketing**, **Design** y **Adobe for creativity** (Personalizar → Plugins → Discover) y conectá **Figma** en Configuración → Conectores. El plugin los usa solo cuando están: textos con la voz de la marca, fotos preparadas, revisión del diseño y versiones para cada red.
 
 Después, hablale normal y en español: "configurá la marca de [cliente]", "diseñá una historia con este texto y esta foto", "quiero una historia inspirada en…". Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-with-claude:design-piece` (o `:brand-setup`, `:design-from-ideas`; escribí `/` y elegilo de la lista). Las actualizaciones llegan solas.
 
 ## Changelog
 
+- **0.3.0** — Works together with the Marketing, Design and Adobe plugins and the Figma connector when installed: copy in the brand's voice, photo prep, critique before delivery, per-channel variants, and a joined-up flow from brand to saved style. Companion plugins are optional.
 - **0.2.0** — Brand kit lives in Claude's Design System artifact when available (brand.md as fallback); `design-piece` reads fonts and logos from it, always ships the `.jsx` for editable text with a PSD, and flags low-resolution or third-party content in photos; stronger skill triggers (English and Spanish).
 - **0.1.0** — First version: brand setup, piece design (PNG/PSD/jsx/Figma), design from ideas, Figma and Adobe connectors.
 
