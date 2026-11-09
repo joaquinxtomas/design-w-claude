@@ -1,0 +1,17 @@
+{
+  "name": "design-with-claude",
+  "owner": {
+    "name": "Joaquin Palacios"
+  },
+  "metadata": {
+    "description": "A graphic design workflow for Claude: brand kits, social pieces from a brief or an idea, delivered editable in Photoshop or Figma."
+  },
+  "plugins": [
+    {
+      "name": "design-with-claude",
+      "source": "./plugins/design-with-claude",
+      "description": "Set up a brand once, design social pieces (stories, posts, flyers) from a brief or from ideas, and get them editable in Photoshop or Figma.",
+      "version": "0.1.0"
+    }
+  ]
+}
