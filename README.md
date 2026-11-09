@@ -42,9 +42,25 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 | "Save this as the 'opening hours' style" | Next time one line is enough |
 | "I want a story inspired by 70s movie posters" | Proposes a design direction first, then designs |
 
-Tips:
-- Create one Claude **Project per client**.
-- To force a skill, start your message with it: `/design-with-claude:brand-setup`, `/design-with-claude:design-piece` or `/design-with-claude:design-from-ideas` (type `/` and pick it from the list).
+Tip: create one Claude **Project per client**.
+
+## Commands
+
+Skills usually start on their own. To make sure one runs, start your message with its command (type `/` and pick it from the list).
+
+| Command | What it does | Example |
+| --- | --- | --- |
+| `/design-with-claude:brand-setup` | Sets up a brand (colors, fonts, logo, tone) as a design system in Claude, or saves an approved style | `/design-with-claude:brand-setup Set up the brand for "Raíz", a neighborhood flower shop. I only have this photo.` |
+| `/design-with-claude:design-piece` | Designs a piece from a short brief and delivers PNG + layered PSD + `.jsx` (editable text), or builds it in Figma | `/design-with-claude:design-piece Story for Raíz: "PEONIES ARE HERE". Use the attached photo.` |
+| `/design-with-claude:design-from-ideas` | No reference? Turns an idea (texture, era, artist, feeling) into a design direction, gets your OK, then designs | `/design-with-claude:design-from-ideas A story inspired by 70s movie posters for the summer sale.` |
+
+Useful commands from the companion **Marketing** plugin (if installed):
+
+| Command | What it does | Example |
+| --- | --- | --- |
+| `/marketing:campaign-plan` | Plans a campaign or a week of content | `/marketing:campaign-plan Launch week for the first drop on 11/11.` |
+| `/marketing:draft-content` | Writes copy for a piece in the brand's voice | `/marketing:draft-content Copy for 3 stories announcing the drop.` |
+| `/marketing:brand-review` | Checks copy against the brand voice | `/marketing:brand-review Review these 3 headlines.` |
 
 ## What's inside
 
@@ -97,7 +113,23 @@ Trabajá con un **Proyecto de Claude por cliente** y hablale normal:
 | "Guardá esto como estilo 'aviso de horario'" | La próxima vez alcanza con una línea: "aviso de horario, abrimos a las 12" |
 | "Quiero una historia inspirada en [una idea, textura, época o artista]" | Primero te propone una dirección de diseño; cuando la aprobás, diseña |
 
-Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-with-claude:design-piece` (o `:brand-setup`, `:design-from-ideas`). Escribí `/` y elegilo de la lista.
+### Comandos
+
+Normalmente las skills se activan solas. Si querés asegurarte de que use una, empezá el mensaje con su comando (escribí `/` y elegilo de la lista).
+
+| Comando | Qué hace | Ejemplo |
+| --- | --- | --- |
+| `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono) como sistema de diseño en Claude, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz", una florería de barrio. Solo tengo esta foto.` |
+| `/design-with-claude:design-piece` | Diseña una pieza a partir de un pedido corto y entrega PNG + PSD con capas + `.jsx` (texto editable), o la arma en Figma | `/design-with-claude:design-piece Historia para Raíz: "LLEGARON LAS PEONÍAS". Usá la foto adjunta.` |
+| `/design-with-claude:design-from-ideas` | ¿Sin referencia? Convierte una idea (textura, época, artista, sensación) en una dirección de diseño, espera tu OK y después diseña | `/design-with-claude:design-from-ideas Una historia inspirada en los carteles de cine de los 70 para la liquidación de verano.` |
+
+Comandos útiles del plugin **Marketing** (si lo tenés instalado):
+
+| Comando | Qué hace | Ejemplo |
+| --- | --- | --- |
+| `/marketing:campaign-plan` | Planifica una campaña o la semana de contenido | `/marketing:campaign-plan Semana de lanzamiento del primer drop del 11/11.` |
+| `/marketing:draft-content` | Escribe los textos de una pieza con la voz de la marca | `/marketing:draft-content Textos para 3 historias que anuncian el drop.` |
+| `/marketing:brand-review` | Revisa que los textos respeten la voz de la marca | `/marketing:brand-review Revisá estos 3 títulos.` |
 
 ### 4. Qué archivos recibís
 
@@ -122,6 +154,7 @@ Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-with
 
 ## Changelog
 
+- **0.3.4** — README: command tables (what each does + an example) in English and Spanish, including useful Marketing plugin commands.
 - **0.3.3** — The Adobe companion plugin is now called **Adobe** in the directory; names updated.
 - **0.3.2** — Full Spanish guide: install, companion plugins (and that they are only used when installed), how to use, what files you get, and the step-by-step Photoshop flow with the `.jsx` for editable text.
 - **0.3.1** — Fix: `build_psd.py` wrote PSDs with width and height swapped (1920×1080); they are now 1080×1920. Regenerate PSDs made with earlier versions.
