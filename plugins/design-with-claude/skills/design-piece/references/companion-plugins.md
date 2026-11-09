@@ -8,7 +8,7 @@ Find them by looking at the available skills (names and descriptions). Names cha
 | --- | --- | --- | --- |
 | Marketing (Anthropic) | brand voice, brand review, drafting content, campaign planning | Writing or tightening the copy of a piece in the brand's voice; checking copy against the voice; planning a week or a campaign of pieces | Before designing (copy), and when planning batches |
 | Design (Anthropic) | design critique, accessibility review | Reviewing the finished piece (hierarchy, contrast, legibility) before delivering | After the review checklist, before delivery |
-| Adobe for creativity (plugin or connector) | batch photo editing, background removal, resizing, social variations, fonts | Preparing photos (match color across a set, remove backgrounds, expand to vertical); finding licensed fonts; producing per-channel versions after approval | Before designing (photos, fonts) and after approval (variants) |
+| Adobe (plugin or connector) | batch photo editing, background removal, resizing, social variations, fonts | Preparing photos (match color across a set, remove backgrounds, expand to vertical); finding licensed fonts; producing per-channel versions after approval | Before designing (photos, fonts) and after approval (variants) |
 | Figma (connector or plugin) | writing to the canvas, design systems | Building the piece natively in the user's Figma file when they work in Figma | Delivery |
 | Anthropic design skills | theme-factory, canvas-design, algorithmic-art | Palettes and font pairings, exploratory pieces, original textures | Direction and sketching |
 

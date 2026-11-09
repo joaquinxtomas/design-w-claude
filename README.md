@@ -23,7 +23,7 @@ This plugin is the glue; these do specialized parts and it uses them automatical
 | --- | --- | --- |
 | **Marketing** (Anthropic) | Customize → Plugins → Discover | Copy in the brand's voice, campaign and weekly planning |
 | **Design** (Anthropic) | Customize → Plugins → Discover | Critique of the piece before delivery (hierarchy, contrast) |
-| **Adobe for creativity** | Customize → Plugins → Discover (or the Adobe connector) | Photo prep, licensed fonts, per-channel versions |
+| **Adobe** | Customize → Plugins → Discover (or the Adobe connector) | Photo prep, licensed fonts, per-channel versions |
 | **Figma** | Settings → Connectors | Build pieces natively in your Figma file |
 
 ### How it all fits
@@ -79,7 +79,7 @@ El plugin funciona solo, pero **solo usa estas herramientas si las tenés instal
 | --- | --- | --- |
 | **Marketing** | Personalizar → Plugins → Discover | Escribe los textos con la voz de cada marca y planifica la semana de piezas |
 | **Design** | Personalizar → Plugins → Discover | Revisa la pieza antes de entregarla (jerarquía, contraste, legibilidad) |
-| **Adobe for creativity** | Personalizar → Plugins → Discover | Prepara fotos (color parejo, fondos, pasar a vertical), busca fuentes y genera las versiones para cada red |
+| **Adobe** | Personalizar → Plugins → Discover | Prepara fotos (color parejo, fondos, pasar a vertical), busca fuentes y genera las versiones para cada red |
 | **Figma** | Configuración → Conectores | Arma las piezas directo en tu archivo de Figma |
 
 Para Adobe y Figma, la primera vez te pide iniciar sesión con tu cuenta.
@@ -122,6 +122,7 @@ Si querés asegurarte de que use el plugin, empezá el mensaje con `/design-with
 
 ## Changelog
 
+- **0.3.3** — The Adobe companion plugin is now called **Adobe** in the directory; names updated.
 - **0.3.2** — Full Spanish guide: install, companion plugins (and that they are only used when installed), how to use, what files you get, and the step-by-step Photoshop flow with the `.jsx` for editable text.
 - **0.3.1** — Fix: `build_psd.py` wrote PSDs with width and height swapped (1920×1080); they are now 1080×1920. Regenerate PSDs made with earlier versions.
 - **0.3.0** — Works together with the Marketing, Design and Adobe plugins and the Figma connector when installed: copy in the brand's voice, photo prep, critique before delivery, per-channel variants, and a joined-up flow from brand to saved style. Companion plugins are optional.
