@@ -84,7 +84,7 @@ def save(layers, png_out, psd_out=None):
             c = a[t:b, l:r]
             psd_layers.append(nl.Image(name=name, top=int(t), left=int(l),
                                        channels={0: c[..., 0], 1: c[..., 1], 2: c[..., 2], -1: c[..., 3]}))
-        psd = nl.nested_layers_to_psd(psd_layers, color_mode=enums.ColorMode.rgb, size=(h, w),
+        psd = nl.nested_layers_to_psd(psd_layers, color_mode=enums.ColorMode.rgb, size=(w, h),  # pytoshop expects (width, height)
                                       compression=enums.Compression.raw)
         with open(psd_out, "wb") as fh:
             psd.write(fh)

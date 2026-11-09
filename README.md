@@ -69,6 +69,7 @@ Después, hablale normal y en español: "configurá la marca de [cliente]", "dis
 
 ## Changelog
 
+- **0.3.1** — Fix: `build_psd.py` wrote PSDs with width and height swapped (1920×1080); they are now 1080×1920. Regenerate PSDs made with earlier versions.
 - **0.3.0** — Works together with the Marketing, Design and Adobe plugins and the Figma connector when installed: copy in the brand's voice, photo prep, critique before delivery, per-channel variants, and a joined-up flow from brand to saved style. Companion plugins are optional.
 - **0.2.0** — Brand kit lives in Claude's Design System artifact when available (brand.md as fallback); `design-piece` reads fonts and logos from it, always ships the `.jsx` for editable text with a PSD, and flags low-resolution or third-party content in photos; stronger skill triggers (English and Spanish).
 - **0.1.0** — First version: brand setup, piece design (PNG/PSD/jsx/Figma), design from ideas, Figma and Adobe connectors.
