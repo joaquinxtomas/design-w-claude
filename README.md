@@ -41,8 +41,14 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 | "Headline smaller, less darkening on the photo" | Applies only those changes |
 | "Save this as the 'opening hours' style" | Next time one line is enough |
 | "I want a story inspired by 70s movie posters" | Proposes a design direction first, then designs |
+| "Set up the brand from @cafelumbre's Instagram" | Looks at the profile, latest posts and highlights in your browser and builds the brand from them |
+| "Take the design of @cafelumbre's latest post and make a story for the campaign" | Skips pinned posts, reads the latest one and designs in that style |
 
 Tip: create one Claude **Project per client**.
+
+### References from Instagram
+
+Needs the Claude desktop app with a browser (built-in browser or Claude in Chrome) where you are signed in to Instagram. Claude only looks: no likes, follows or messages, a handful of posts at a normal pace, and it stops if Instagram shows any warning. Opening highlights shows the brand that your account viewed them. Colors and fonts from screenshots are approximate, so share the real files when you have them. No browser? Send 3–5 screenshots instead.
 
 ## Commands
 
@@ -50,7 +56,7 @@ Skills usually start on their own. To make sure one runs, start your message wit
 
 | Command | What it does | Example |
 | --- | --- | --- |
-| `/design-with-claude:brand-setup` | Sets up a brand (colors, fonts, logo, tone) as a design system in Claude, or saves an approved style | `/design-with-claude:brand-setup Set up the brand for "Raíz", a neighborhood flower shop. I only have this photo.` |
+| `/design-with-claude:brand-setup` | Sets up a brand (colors, fonts, logo, tone) as a design system in Claude, from files or from its Instagram, or saves an approved style | `/design-with-claude:brand-setup Set up the brand for "Raíz", a neighborhood flower shop. Use @raiz.flores on Instagram.` |
 | `/design-with-claude:design-piece` | Designs a piece from a short brief and delivers PNG + layered PSD + `.jsx` (editable text), or builds it in Figma | `/design-with-claude:design-piece Story for Raíz: "PEONIES ARE HERE". Use the attached photo.` |
 | `/design-with-claude:design-from-ideas` | No reference? Turns an idea (texture, era, artist, feeling) into a design direction, gets your OK, then designs | `/design-with-claude:design-from-ideas A story inspired by 70s movie posters for the summer sale.` |
 
@@ -112,6 +118,15 @@ Trabajá con un **Proyecto de Claude por cliente** y hablale normal:
 | "Título más chico, oscurecé menos la foto" | Cambia solo eso |
 | "Guardá esto como estilo 'aviso de horario'" | La próxima vez alcanza con una línea: "aviso de horario, abrimos a las 12" |
 | "Quiero una historia inspirada en [una idea, textura, época o artista]" | Primero te propone una dirección de diseño; cuando la aprobás, diseña |
+| "Configurá la marca a partir del Instagram de @cliente" | Mira el perfil, las últimas publicaciones y los destacados en tu navegador y arma la marca con eso |
+| "Tomá el diseño de la última publicación de @cliente y armá una historia para la campaña" | Saltea las fijadas, lee la última y diseña con ese estilo |
+
+#### Referencias desde Instagram
+
+- **Qué necesitás:** la app de escritorio de Claude con un navegador (el integrado o Claude en Chrome) donde tengas la sesión de Instagram iniciada.
+- **Qué hace Claude:** solo mira. No da me gusta, no sigue cuentas ni manda mensajes, abre pocas publicaciones a ritmo normal y frena si Instagram muestra cualquier aviso.
+- **Tené en cuenta:** al abrir destacados, la marca ve que tu cuenta los vio. Los colores y las letras sacados de capturas son aproximados: si tenés los archivos reales de la marca, pasáselos.
+- **Sin navegador:** mandale 3 a 5 capturas de publicaciones o historias y hace lo mismo.
 
 ### Comandos
 
@@ -119,7 +134,7 @@ Normalmente las skills se activan solas. Si querés asegurarte de que use una, e
 
 | Comando | Qué hace | Ejemplo |
 | --- | --- | --- |
-| `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono) como sistema de diseño en Claude, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz", una florería de barrio. Solo tengo esta foto.` |
+| `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono) como sistema de diseño en Claude, a partir de archivos o de su Instagram, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz", una florería de barrio. Usá su Instagram @raiz.flores.` |
 | `/design-with-claude:design-piece` | Diseña una pieza a partir de un pedido corto y entrega PNG + PSD con capas + `.jsx` (texto editable), o la arma en Figma | `/design-with-claude:design-piece Historia para Raíz: "LLEGARON LAS PEONÍAS". Usá la foto adjunta.` |
 | `/design-with-claude:design-from-ideas` | ¿Sin referencia? Convierte una idea (textura, época, artista, sensación) en una dirección de diseño, espera tu OK y después diseña | `/design-with-claude:design-from-ideas Una historia inspirada en los carteles de cine de los 70 para la liquidación de verano.` |
 
@@ -154,6 +169,7 @@ Comandos útiles del plugin **Marketing** (si lo tenés instalado):
 
 ## Changelog
 
+- **0.4.0** — References from Instagram: give a brand's `@account` (or ask for "their latest post") and Claude reads the profile, latest posts and highlights in your browser, read-only and at a normal pace, skipping pinned posts; screenshots as a fallback.
 - **0.3.4** — README: command tables (what each does + an example) in English and Spanish, including useful Marketing plugin commands.
 - **0.3.3** — The Adobe companion plugin is now called **Adobe** in the directory; names updated.
 - **0.3.2** — Full Spanish guide: install, companion plugins (and that they are only used when installed), how to use, what files you get, and the step-by-step Photoshop flow with the `.jsx` for editable text.

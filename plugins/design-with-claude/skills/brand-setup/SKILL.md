@@ -3,13 +3,14 @@ name: brand-setup
 description: >
   This skill should be used whenever the user wants to "set up a brand", "configure a brand",
   "load a client's brand", "build a brand kit", "create a design system for a brand", "save this
-  style", "save as a template", or starts working with a new client; in Spanish: "configurá la
+  style", "save as a template", "take references from Instagram", "use @brand's Instagram", "get the
+  design of their latest post", or starts working with a new client; in Spanish: "configurá la
   marca", "cargá la marca de", "armá el kit de marca", "guardá este estilo", "guardalo como
-  plantilla". Load it before building any brand kit or design system for a client. It gathers logo,
+  plantilla", "tomá referencias del Instagram de", "sacá el diseño de la última publicación". Load it before building any brand kit or design system for a client. It gathers logo,
   fonts, colors, tone and references, records them in the session's Design System artifact (or a
   brand.md file), and saves approved styles so later pieces take one line.
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Brand setup
@@ -27,9 +28,13 @@ Ask for anything missing in a single, plain-language message. Do not block work 
 | Logo | Transparent PNG or SVG, light and dark versions | Use what exists and note the missing version |
 | Fonts | .otf/.ttf file or the exact name | See "Fonts" below |
 | Colors | HEX codes | Extract them from the logo or references and ask for confirmation |
-| References | 3 to 5 pieces that already worked | Switch to the design-from-ideas skill |
+| References | 3 to 5 pieces that already worked, or the brand's Instagram account | Switch to the design-from-ideas skill |
 | Photos | Real brand photos in good resolution | Use free stock (Unsplash) and say so |
 | Tone | 4 or 5 lines | Propose a tone from the references and confirm it |
+
+## References from Instagram
+
+If the user gives an Instagram account or post (`@brand`, a link) or asks for the design of the brand's latest post, read `references/instagram-references.md` and follow it: browser with the user's own session, read-only and at a normal pace, skip pinned posts, highlights for stories, and screenshots as the fallback. Record what it finds as approximate and ask for the real files.
 
 ## Companion plugins
 

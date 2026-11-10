@@ -11,7 +11,7 @@
       "name": "design-with-claude",
       "source": "./plugins/design-with-claude",
       "description": "Set up a brand once, design social pieces (stories, posts, flyers) from a brief or from ideas, and get them editable in Photoshop or Figma.",
-      "version": "0.3.4"
+      "version": "0.4.0"
     }
   ]
 }

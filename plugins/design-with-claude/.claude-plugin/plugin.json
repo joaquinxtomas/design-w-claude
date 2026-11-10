@@ -1,6 +1,6 @@
 {
   "name": "design-with-claude",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "Graphic design workflow with Claude: set up a brand once, design pieces (stories, posts, flyers) from a brief or from ideas, and deliver them editable in Photoshop or Figma.",
   "author": {
     "name": "Joaquin Palacios"
