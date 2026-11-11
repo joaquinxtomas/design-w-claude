@@ -105,8 +105,6 @@ Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, f
 
 Este plugin te ayuda a diseñar piezas para tus marcas (historias, posts, flyers) con Claude: cargás la marca una vez, pedís la pieza con pocas palabras y la recibís lista para terminar en Photoshop o Figma. Vos dirigís y terminás; Claude hace lo repetitivo.
 
-> **¿Dudas?** Preguntale a Claude: "explicame cómo funciona el plugin design-with-claude" o "¿qué hace la skill X?". Te lo explica con ejemplos.
-
 ### Empezá por acá (lo básico)
 
 1. Instalá el plugin (paso 1).
