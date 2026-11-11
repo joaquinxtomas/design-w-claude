@@ -9,7 +9,7 @@ description: >
   short brief, uses the brand's design system (or brand.md), designs the piece and delivers a PNG
   plus a layered PSD, a Photoshop .jsx script with editable text, or a Figma frame.
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Design a piece
@@ -83,6 +83,11 @@ When part of the result is approximate (font, 3D, photo, background), end the de
 - Ask for concrete notes and apply them all together ("headline 20% smaller, less darkening on the photo").
 - Change only what was asked; do not rebuild the whole piece.
 - Once approved, offer to save it as a named style in the brand's design system or brand.md (brand-setup skill). Mention this in one line at the end of the first delivery, too.
+
+
+## Design folder
+
+If the user keeps a design folder (see the design-folder skill), save what this skill produced there and add a line to the brand's historial.md: the delivered files in piezas/YYYY-MM_<campaign>/, an approved style in estilos/, and heavy follow-ups (3D, batches, Photoshop finishing) in pendientes-code.md.
 
 ## Batch production
 

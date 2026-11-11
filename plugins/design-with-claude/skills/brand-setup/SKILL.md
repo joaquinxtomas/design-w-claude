@@ -10,7 +10,7 @@ description: >
   fonts, colors, tone and references, records them in the session's Design System artifact (or a
   brand.md file), and saves approved styles so later pieces take one line.
 metadata:
-  version: "0.4.0"
+  version: "0.6.0"
 ---
 
 # Brand setup
@@ -74,6 +74,11 @@ Pick where the brand lives, in this order:
 In both cases, also keep a short "Saved styles" section (in the design system's README, or in brand.md) and the real font names plus free fallbacks for previews. Show a short summary for the user to confirm.
 
 When proposing options (logos, font pairings), present 2 or 3 clearly labeled choices, apply one as the default, and ask the user to pick.
+
+
+## Design folder
+
+If the user keeps a design folder (see the design-folder skill), save what this skill produced there and add a line to the brand's historial.md: brand.md, CLAUDE.md, logos and fonts in the brand's folder; a new brand gets its folder created.
 
 ## 4. Suggest a Project
 

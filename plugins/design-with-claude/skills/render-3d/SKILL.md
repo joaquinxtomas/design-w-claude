@@ -8,7 +8,7 @@ description: >
   inflated letters (optional drips and a glossy rim/base) with Blender in the workspace and hands a
   transparent PNG to the design-piece skill, which assembles the PNG/PSD/.jsx.
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Render a 3D title
@@ -57,6 +57,11 @@ Tune with the preview, one change at a time: `front`/`rim_material` colors, `wor
 ## 5. When it falls short, say what would get closer
 
 End the delivery with 1 or 2 concrete alternatives from `../design-piece/references/tool-recommendations.md` (for 3D: Illustrator 3D and Materials > Inflate on vectors Claude prepares, the Blender connector in the desktop app, Spline, or Firefly text effects), with what each would improve.
+
+
+## Design folder
+
+If the user keeps a design folder (see the design-folder skill), save what this skill produced there and add a line to the brand's historial.md: the config that worked in 3d/<name>.json with the render, and the font file in fuentes/.
 
 ## Limits
 

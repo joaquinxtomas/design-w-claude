@@ -39,6 +39,8 @@ Describe concretely, at 1080 px width:
 
 ## Record it
 
+- With a design folder: save the opened posts' images in `referencias/instagram/YYYY-MM-DD_<topic>.jpg` (on the user's computer, Claude Code can save the original full-resolution file; otherwise capture the opened post at 1:1 in tiles and stitch them) and add what was learned to `referencias/instagram/notas.md`.
+
 - Add the findings to the brand's design system (or brand.md) marked "source: Instagram (approximate)". Ask for the real logo, font files and photos; they always beat screenshots.
 - A campaign becomes a **saved style** (e.g. "BRAVA Sessions") so later pieces take one line.
 - Use the screenshots only as reference. Do not reuse the brand's photos or artwork inside new pieces unless the user provides the files or confirms the brand owns them and wants them reused.
