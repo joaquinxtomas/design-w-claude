@@ -15,6 +15,18 @@ You need a paid Claude plan (Pro, Max, Team or Enterprise).
 
 Turn on **Sync automatically** on the marketplace so updates arrive on their own.
 
+### Claude Code (installed separately)
+
+Plugins installed in the Claude app are **not** shared with Claude Code; install it there too. Inside a Claude Code session (desktop app → **Code**, or the terminal):
+
+```
+/plugin marketplace add joaquinxtomas/design-w-claude
+/plugin install design-with-claude@design-with-claude
+/reload-plugins
+```
+
+Update later with `/plugin marketplace update design-with-claude`. For Instagram references in Claude Code, install the **Claude in Chrome** extension and start with `claude --chrome` (or run `/chrome` in a session). Claude Code cannot read Claude Projects or chats: keep each brand's context in the design folder (see the design-folder skill).
+
 ## Recommended companion plugins
 
 This plugin is the glue; these do specialized parts and it uses them automatically when they are installed (none is required):
@@ -96,6 +108,18 @@ Necesitás un plan pago de Claude (Pro, Max, Team o Enterprise).
 2. Tocá **Add marketplace** y pegá: `joaquinxtomas/design-w-claude`
 3. Buscá **design-with-claude** y tocá **Instalar**.
 4. En ese mismo marketplace, activá **Sync automatically** para que las mejoras te lleguen solas.
+
+**En Claude Code se instala aparte.** Lo que instalás en la app de Claude no aparece en Claude Code. Abrí una sesión de Claude Code (app de escritorio → pestaña **Code**, o la terminal) y escribí, uno por vez:
+
+```
+/plugin marketplace add joaquinxtomas/design-w-claude
+/plugin install design-with-claude@design-with-claude
+/reload-plugins
+```
+
+- Para actualizarlo más adelante: `/plugin marketplace update design-with-claude`.
+- Para que tome referencias de Instagram desde Claude Code: instalá la extensión **Claude in Chrome** y abrí Claude Code con `claude --chrome` (o escribí `/chrome` dentro de la sesión).
+- Claude Code no lee tus Proyectos ni chats de Claude: el contexto de cada marca va en la **carpeta de diseños** (más abajo).
 
 ### 2. Instalar los plugins que lo complementan (recomendado)
 
