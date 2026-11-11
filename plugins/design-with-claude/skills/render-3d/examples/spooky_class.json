@@ -1,0 +1,22 @@
+{
+  "_note": "Inflated cream letters on a glossy red base, with drips (BRAVA 'Spooky Class' style). Replace the paths.",
+  "font": "/path/to/Chicle-Regular.ttf",
+  "lines": [
+    {"text": "SPOOKY", "size": 640, "drips": [[[0.20, 0.55], [0.66, 0.18]], [[0.30, 0.12]], [[0.50, 0.48]], [[0.58, 0.30]], [[0.78, 0.16]], [[0.52, 0.95]]]},
+    {"text": "CLASS", "size": 610, "drips": [[[0.34, 0.85], [0.74, 0.12]], [[0.32, 0.22]], [[0.22, 0.14], [0.80, 0.24]], [[0.50, 0.72]], [[0.55, 0.88]]]}
+  ],
+  "fatten": 12,
+  "width_scale": 1.22,
+  "tracking": -0.06,
+  "line_gap": 0.82,
+  "jitter": {"rotate": 3, "y": 8, "seed": 4},
+  "inflate_radius": 75,
+  "rim": {"grow": 26, "offset": [14, -9], "radius": 40},
+  "drip_style": {"scale": 0.85},
+  "front": {"color": [0.84, 0.75, 0.63], "roughness": 0.32, "coat": 0.4, "subsurface": 0.15},
+  "rim_material": {"color": [0.38, 0.0, 0.015], "roughness": 0.12, "metallic": 0.35, "coat": 1.0},
+  "world": {"color": [0.3, 0.06, 0.07], "strength": 0.45},
+  "height": 0.55,
+  "render": {"scale": 0.75, "samples": 40, "step": 2},
+  "out_dir": "/path/to/output"
+}

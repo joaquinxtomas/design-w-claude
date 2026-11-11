@@ -43,6 +43,7 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 | "I want a story inspired by 70s movie posters" | Proposes a design direction first, then designs |
 | "Set up the brand from @cafelumbre's Instagram" | Looks at the profile, latest posts and highlights in your browser and builds the brand from them |
 | "Take the design of @cafelumbre's latest post and make a story for the campaign" | Skips pinned posts, reads the latest one and designs in that style |
+| "Make the title 3D: inflated cream letters with drips, like this reference" | Renders the 3D title with Blender in the workspace and builds the piece around it |
 
 Tip: create one Claude **Project per client**.
 
@@ -58,6 +59,7 @@ Skills usually start on their own. To make sure one runs, start your message wit
 | --- | --- | --- |
 | `/design-with-claude:brand-setup` | Sets up a brand (colors, fonts, logo, tone) as a design system in Claude, from files or from its Instagram, or saves an approved style | `/design-with-claude:brand-setup Set up the brand for "Raíz", a neighborhood flower shop. Use @raiz.flores on Instagram.` |
 | `/design-with-claude:design-piece` | Designs a piece from a short brief and delivers PNG + layered PSD + `.jsx` (editable text), or builds it in Figma | `/design-with-claude:design-piece Story for Raíz: "PEONIES ARE HERE". Use the attached photo.` |
+| `/design-with-claude:render-3d` | Renders a 3D title (inflated letters, drips, glossy rim) as a transparent PNG for the piece | `/design-with-claude:render-3d "SPOOKY CLASS", cream letters with drips on a glossy red base, like the attached post.` |
 | `/design-with-claude:design-from-ideas` | No reference? Turns an idea (texture, era, artist, feeling) into a design direction, gets your OK, then designs | `/design-with-claude:design-from-ideas A story inspired by 70s movie posters for the summer sale.` |
 
 Useful commands from the companion **Marketing** plugin (if installed):
@@ -120,6 +122,14 @@ Trabajá con un **Proyecto de Claude por cliente** y hablale normal:
 | "Quiero una historia inspirada en [una idea, textura, época o artista]" | Primero te propone una dirección de diseño; cuando la aprobás, diseña |
 | "Configurá la marca a partir del Instagram de @cliente" | Mira el perfil, las últimas publicaciones y los destacados en tu navegador y arma la marca con eso |
 | "Tomá el diseño de la última publicación de @cliente y armá una historia para la campaña" | Saltea las fijadas, lee la última y diseña con ese estilo |
+| "Hacé el título en 3D: letras infladas color crema con gotas, como esta referencia" | Renderiza el título 3D con Blender y arma la pieza alrededor |
+
+#### Títulos 3D
+
+- **Qué sale bien:** letras infladas, gotas y chorreados, plástico brillante, gelatina, caramelo. **Qué no:** gemas, vidrio y cristal.
+- **Cómo funciona:** Claude dibuja las letras (y las gotas) en plano, las "infla" y las renderiza en 3D con Blender. Tarda unos 2 o 3 minutos y entrega un PNG transparente que va como capa en el PSD.
+- **Para el mejor resultado:** pasale una captura en buena calidad de la referencia (o la publicación abierta, no la grilla). La tipografía es la gratuita más parecida.
+- **Si querés llevarlo más lejos:** Claude te sugiere al final la mejor ruta, por ejemplo Illustrator (Efecto → 3D y materiales → Inflar) sobre los vectores que te prepara, o el conector de Blender en la app de escritorio.
 
 #### Referencias desde Instagram
 
@@ -136,6 +146,7 @@ Normalmente las skills se activan solas. Si querés asegurarte de que use una, e
 | --- | --- | --- |
 | `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono) como sistema de diseño en Claude, a partir de archivos o de su Instagram, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz", una florería de barrio. Usá su Instagram @raiz.flores.` |
 | `/design-with-claude:design-piece` | Diseña una pieza a partir de un pedido corto y entrega PNG + PSD con capas + `.jsx` (texto editable), o la arma en Figma | `/design-with-claude:design-piece Historia para Raíz: "LLEGARON LAS PEONÍAS". Usá la foto adjunta.` |
+| `/design-with-claude:render-3d` | Renderiza un título 3D (letras infladas, gotas, borde brillante) como PNG transparente para la pieza | `/design-with-claude:render-3d "SPOOKY CLASS", letras crema con gotas sobre base roja brillante, como el post adjunto.` |
 | `/design-with-claude:design-from-ideas` | ¿Sin referencia? Convierte una idea (textura, época, artista, sensación) en una dirección de diseño, espera tu OK y después diseña | `/design-with-claude:design-from-ideas Una historia inspirada en los carteles de cine de los 70 para la liquidación de verano.` |
 
 Comandos útiles del plugin **Marketing** (si lo tenés instalado):
@@ -169,6 +180,7 @@ Comandos útiles del plugin **Marketing** (si lo tenés instalado):
 
 ## Changelog
 
+- **0.5.0** — New `render-3d` skill: inflated 3D titles with drips and a glossy rim (2D silhouette → inflate → Blender render), with a tested recipe. Design-piece now ends deliveries with 1–2 concrete routes to get closer when something is approximate (Illustrator Inflate, Blender connector, Firefly, Adobe Fonts…).
 - **0.4.0** — References from Instagram: give a brand's `@account` (or ask for "their latest post") and Claude reads the profile, latest posts and highlights in your browser, read-only and at a normal pace, skipping pinned posts; screenshots as a fallback.
 - **0.3.4** — README: command tables (what each does + an example) in English and Spanish, including useful Marketing plugin commands.
 - **0.3.3** — The Adobe companion plugin is now called **Adobe** in the directory; names updated.

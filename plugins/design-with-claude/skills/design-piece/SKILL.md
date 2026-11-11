@@ -9,7 +9,7 @@ description: >
   short brief, uses the brand's design system (or brand.md), designs the piece and delivers a PNG
   plus a layered PSD, a Photoshop .jsx script with editable text, or a Figma frame.
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 
 # Design a piece
@@ -52,6 +52,7 @@ When Marketing, Design, Adobe or Figma plugins/connectors are installed, use the
 - Use the real font when the file is available; otherwise the fallback recorded with the brand for the preview, and the real name in scripts and Figma.
 - Put each element on its own clearly named layer (Photo, Darken, Headline, Subhead, Logo, Call to action).
 - Check the input photo: if it is smaller than the canvas, say so and ask for the original; flag third-party logos or text visible in it.
+- If the piece needs a 3D title (inflated, dripping, glossy lettering), build it with the render-3d skill and place its transparent PNG here.
 - Techniques and code: see `references/delivery-formats.md` and `scripts/build_psd.py`. Rendering layers from HTML with a headless browser is also fine when it gives better typography; the deliverables stay the same.
 
 ## 4. Review before delivering
@@ -72,6 +73,10 @@ Always deliver the PNG preview plus the requested format. **Whenever a PSD is de
 Explain the .jsx in one line: open Photoshop (and the PSD if relevant) → File → Scripts → Browse → pick the file.
 
 For Figma: ask for the file link, get the photos into the file before designing, build with auto layout, logo as a component and real text. Details in `references/delivery-formats.md`.
+
+### Recommend better routes
+
+When part of the result is approximate (font, 3D, photo, background), end the delivery with a short "To get closer" note: 1 or 2 concrete options from `references/tool-recommendations.md` (Illustrator Inflate, Blender connector, Firefly, Adobe Fonts, Figma…), each with what it improves and what it costs. Keep it to two lines; skip it when nothing is missing.
 
 ## 6. Iterate
 
