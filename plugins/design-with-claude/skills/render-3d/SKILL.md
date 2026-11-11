@@ -8,7 +8,7 @@ description: >
   inflated letters (optional drips and a glossy rim/base) with Blender in the workspace and hands a
   transparent PNG to the design-piece skill, which assembles the PNG/PSD/.jsx.
 metadata:
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Render a 3D title

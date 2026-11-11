@@ -11,7 +11,7 @@ description: >
   after an approved piece or style, after new Instagram references, or when a new tool or idea is
   adopted, if a design folder exists, to keep it current.
 metadata:
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Design folder (context for Claude Code)
@@ -32,7 +32,9 @@ Claude Diseño/                      (name in the user's language; "Claude Desig
 │   ├── historial.md                dated log of everything added (newest first)
 │   ├── pendientes-code.md          jobs left for Claude Code, with everything needed to do them
 │   ├── logos/  fuentes/  fotos/
+│   ├── referencias/fuentes.md      links of the brand + what was learned from each (see brand-setup/references/sources.md)
 │   ├── referencias/instagram/      opened posts, full resolution, named YYYY-MM-DD_<topic>.jpg
+│   ├── referencias/web/            website screenshots and assets taken from it
 │   ├── referencias/cliente/        briefs and examples from the client
 │   ├── estilos/                    one <style>.md per approved style + <style>.png example
 │   ├── 3d/                         render-3d configs (.json) that worked + their renders
@@ -65,6 +67,8 @@ What goes where:
 | Brand fact (color, font, tone, margin) | brand.md | If it is a rule ("never…", "always…"), also CLAUDE.md |
 | Approved style | estilos/<style>.md + .png | One line in CLAUDE.md "Saved styles" |
 | Delivered piece | piezas/YYYY-MM_<campaign>/ | links.md for Figma frames |
+| New link (website, social account, inspiration) | brand.md "Sources" + a block in referencias/fuentes.md | Design System README "Sources" if it exists |
+| What was learned from a link | Its block in referencias/fuentes.md, with today's date | brand.md if it changes the brand |
 | Instagram reference | referencias/instagram/ (+ a short note .md with what was learned) | Update brand.md if it changes the brand |
 | 3D title that worked | 3d/<name>.json + render | Note the font file it used |
 | New tool, connector or technique adopted | Root CLAUDE.md "Tools and techniques" if general; the brand's CLAUDE.md if only for that brand | |

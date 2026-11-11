@@ -9,7 +9,7 @@ description: >
   short brief, uses the brand's design system (or brand.md), designs the piece and delivers a PNG
   plus a layered PSD, a Photoshop .jsx script with editable text, or a Figma frame.
 metadata:
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Design a piece
@@ -23,6 +23,7 @@ Always reply in the user's language (the original user writes in Spanish).
 - Find the brand, in this order: the brand's Design System artifact (list the user's artifacts and read its tokens, fonts, logos and README), then brand.md in the Project or connected folder. If neither exists and the brand is unclear, offer to run the brand-setup skill; if the user wants to move on anyway, work with what was given and note assumptions.
 - Reuse the brand's own font files and logo assets when the design system has them; never substitute a different font silently.
 - If the request names a saved style ("closed notice"), apply it as is.
+- If the request asks for inspiration from one of the brand's sources (website, an account, a board), read its block in the source notes first (`../brand-setup/references/sources.md`) and only browse again if the notes are old or the user asks.
 - If the request points to Instagram ("like their latest post", "for the campaign they just launched", `@brand`), take the references first following `../brand-setup/references/instagram-references.md`, then design.
 - Never ask the user to re-upload what is already in the Project.
 

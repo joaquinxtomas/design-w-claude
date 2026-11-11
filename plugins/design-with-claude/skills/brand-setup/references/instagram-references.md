@@ -4,6 +4,8 @@ Use this when the user gives an Instagram account (`@brand`, a profile link or a
 
 ## Before starting
 
+- Check the brand's source notes first (`fuentes.md`, see `sources.md`): if this account was checked recently enough for the task, use the notes instead of browsing again.
+
 - A browser is needed: the built-in browser of the Claude desktop app or Claude in Chrome. Load that browser's skill before the first step. With no browser available, go straight to "Fallback".
 - Work with the user's own Instagram session in that browser. Logged out, Instagram shows very little; if a login wall appears, ask the user to sign in themselves (never type credentials).
 - Say in one line before starting: Claude only looks, at a normal pace, a handful of posts, and opening highlights shows the brand that their account viewed them.
@@ -38,6 +40,8 @@ Describe concretely, at 1080 px width:
 - **Tone:** formal or casual, voseo/tú, emojis, language mix, punctuation habits; quote the caption only briefly.
 
 ## Record it
+
+- Update the account's block in the source notes (`fuentes.md`) with today's date and what was learned.
 
 - With a design folder: save the opened posts' images in `referencias/instagram/YYYY-MM-DD_<topic>.jpg` (on the user's computer, Claude Code can save the original full-resolution file; otherwise capture the opened post at 1:1 in tiles and stitch them) and add what was learned to `referencias/instagram/notas.md`.
 

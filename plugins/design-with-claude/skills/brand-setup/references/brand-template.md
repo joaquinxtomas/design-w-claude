@@ -26,6 +26,16 @@
 - [ ] .jsx script with editable text
 - [ ] Figma frame — file: [link]
 
+## Sources
+### Brand (authoritative)
+- Website: 
+- Instagram: 
+- Other: 
+### Inspiration (ideas only, never copy)
+- 
+
+What was learned from each link: `referencias/fuentes.md` (design folder) or the "Source notes" section.
+
 ## Saved styles
 ### [style name]
 - Purpose: 

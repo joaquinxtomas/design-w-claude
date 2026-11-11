@@ -9,7 +9,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent.parent
 TPL = HERE / "templates"
 BRAND_TPL = HERE.parent / "brand-setup" / "references" / "brand-template.md"
-SUBDIRS = ["logos", "fuentes", "fotos", "referencias/instagram", "referencias/cliente", "estilos", "3d", "piezas"]
+SUBDIRS = ["logos", "fuentes", "fotos", "referencias/instagram", "referencias/web", "referencias/cliente", "estilos", "3d", "piezas"]
 
 
 def write_if_missing(path: Path, text: str):
@@ -37,6 +37,11 @@ def main():
         write_if_missing(d / "CLAUDE.md", claude)
         if BRAND_TPL.exists():
             write_if_missing(d / "brand.md", BRAND_TPL.read_text(encoding="utf-8").replace("[Brand name]", b))
+        write_if_missing(d / "referencias" / "fuentes.md",
+                         f"# Fuentes — {b}\n\n"
+                         "Links de la marca y lo aprendido de cada uno. Ver brand-setup/references/sources.md.\n\n"
+                         "## Marca (mandan)\n- \n\n## Inspiración (solo ideas)\n- \n\n"
+                         "<!-- Un bloque por link: ## nombre — link — marca|inspiración / Revisado: AAAA-MM-DD / tipografías, colores, reglas, tono, revisar cuándo -->\n")
         write_if_missing(d / "historial.md", f"# Historial — {b}\n\n{today} — Carpeta creada.\n\n## Ideas\n- \n")
         write_if_missing(d / "pendientes-code.md",
                          f"# Pendientes para Claude Code — {b}\n\n"

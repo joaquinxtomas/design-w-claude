@@ -53,6 +53,7 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 | "Headline smaller, less darkening on the photo" | Applies only those changes |
 | "Save this as the 'opening hours' style" | Next time one line is enough |
 | "I want a story inspired by 70s movie posters" | Proposes a design direction first, then designs |
+| "Take the brand info from cafelumbre.com" / "add their TikTok" | Reads exact fonts, colors and logo from the website's code, adds every link to the brand's sources, and saves what it learned so it does not search again |
 | "Set up the brand from @cafelumbre's Instagram" | Looks at the profile, latest posts and highlights in your browser and builds the brand from them |
 | "Take the design of @cafelumbre's latest post and make a story for the campaign" | Skips pinned posts, reads the latest one and designs in that style |
 | "Make the title 3D: inflated cream letters with drips, like this reference" | Renders the 3D title with Blender in the workspace and builds the piece around it |
@@ -146,6 +147,7 @@ Trabajá con un **Proyecto de Claude por cliente** y hablale normal:
 | "Título más chico, oscurecé menos la foto" | Cambia solo eso |
 | "Guardá esto como estilo 'aviso de horario'" | La próxima vez alcanza con una línea: "aviso de horario, abrimos a las 12" |
 | "Quiero una historia inspirada en [una idea, textura, época o artista]" | Primero te propone una dirección de diseño; cuando la aprobás, diseña |
+| "Tomá la info de marca de [web]" / "agregá su TikTok" | Lee de la web las tipografías, colores y logo exactos, suma cada link a las fuentes de la marca y guarda lo aprendido para no volver a buscar |
 | "Configurá la marca a partir del Instagram de @cliente" | Mira el perfil, las últimas publicaciones y los destacados en tu navegador y arma la marca con eso |
 | "Tomá el diseño de la última publicación de @cliente y armá una historia para la campaña" | Saltea las fijadas, lee la última y diseña con ese estilo |
 | "Hacé el título en 3D: letras infladas color crema con gotas, como esta referencia" | Renderiza el título 3D con Blender y arma la pieza alrededor |
@@ -180,6 +182,12 @@ Claude Diseño/
 - **Cómo funciona:** Claude dibuja las letras (y las gotas) en plano, las "infla" y las renderiza en 3D con Blender. Tarda unos 2 o 3 minutos y entrega un PNG transparente que va como capa en el PSD.
 - **Para el mejor resultado:** pasale una captura en buena calidad de la referencia (o la publicación abierta, no la grilla). La tipografía es la gratuita más parecida.
 - **Si querés llevarlo más lejos:** Claude te sugiere al final la mejor ruta, por ejemplo Illustrator (Efecto → 3D y materiales → Inflar) sobre los vectores que te prepara, o el conector de Blender en la app de escritorio.
+
+#### Fuentes de la marca (web, redes e inspiración)
+
+- **Todos los links juntos:** en el sistema de diseño (y en `brand.md` para Claude Code) queda la lista de la web, las redes y el manual de la marca (mandan), separada de las cuentas de inspiración (solo ideas, nunca copiar). Para sumar uno: "agregá este link".
+- **Lo aprendido de cada link, guardado:** en `referencias/fuentes.md` queda una ficha por link con la fecha, las tipografías y colores (exactos si salen del código de la web), las reglas de diseño y el tono. La próxima vez que pidas inspiración de esa fuente, Claude usa la ficha en vez de volver a buscar. Si querés que la revise: "fijate si cambió".
+- **Web:** Claude lee el código para sacar los nombres exactos de las tipografías, los colores y el logo en SVG. Ojo: las fuentes de una web suelen tener licencia solo para web; el nombre sirve para activarla en Adobe Fonts o pedírsela al cliente.
 
 #### Referencias desde Instagram
 
@@ -231,6 +239,7 @@ Comandos útiles del plugin **Marketing** (si lo tenés instalado):
 
 ## Changelog
 
+- **0.7.0** — Brand sources: every link of a brand (website, social accounts, brand manual, inspiration) in the design system and brand.md, plus `fuentes.md` notes with what was learned from each link and when, so sources are not analyzed again every time. Websites become an official source (exact fonts, colors and SVG logo read from the code).
 - **0.6.0** — New `design-folder` skill: creates and keeps updated a folder per brand on your computer (CLAUDE.md, brand.md, history, styles, references, pieces, 3D configs, pending jobs for Claude Code), from requests like "add this to the design folder". Brand-setup, design-piece, render-3d and Instagram references now save into it when it exists.
 - **0.5.0** — New `render-3d` skill: inflated 3D titles with drips and a glossy rim (2D silhouette → inflate → Blender render), with a tested recipe. Design-piece now ends deliveries with 1–2 concrete routes to get closer when something is approximate (Illustrator Inflate, Blender connector, Firefly, Adobe Fonts…).
 - **0.4.0** — References from Instagram: give a brand's `@account` (or ask for "their latest post") and Claude reads the profile, latest posts and highlights in your browser, read-only and at a normal pace, skipping pinned posts; screenshots as a fallback.

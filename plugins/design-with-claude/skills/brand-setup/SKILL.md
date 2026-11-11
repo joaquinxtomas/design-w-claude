@@ -10,7 +10,7 @@ description: >
   fonts, colors, tone and references, records them in the session's Design System artifact (or a
   brand.md file), and saves approved styles so later pieces take one line.
 metadata:
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Brand setup
@@ -28,13 +28,22 @@ Ask for anything missing in a single, plain-language message. Do not block work 
 | Logo | Transparent PNG or SVG, light and dark versions | Use what exists and note the missing version |
 | Fonts | .otf/.ttf file or the exact name | See "Fonts" below |
 | Colors | HEX codes | Extract them from the logo or references and ask for confirmation |
-| References | 3 to 5 pieces that already worked, or the brand's Instagram account | Switch to the design-from-ideas skill |
+| References | 3 to 5 pieces that already worked, or the brand's website and social accounts | Switch to the design-from-ideas skill |
+| Links | Website, social accounts, brand manual, inspiration accounts | Ask once; record what exists |
 | Photos | Real brand photos in good resolution | Use free stock (Unsplash) and say so |
 | Tone | 4 or 5 lines | Propose a tone from the references and confirm it |
 
 ## References from Instagram
 
 If the user gives an Instagram account or post (`@brand`, a link) or asks for the design of the brand's latest post, read `references/instagram-references.md` and follow it: browser with the user's own session, read-only and at a normal pace, skip pinned posts, highlights for stories, and screenshots as the fallback. Record what it finds as approximate and ask for the real files.
+
+## Sources: website, social accounts and inspiration
+
+Keep every link of the brand together and learn from each one only once. Read `references/sources.md` and follow it:
+
+- **Sources list** in the Design System README (and brand.md, for Claude Code), split into brand (authoritative) and inspiration.
+- **Source notes** in `fuentes.md`: what each link taught (exact fonts and colors from the website's code, design rules, tone, campaigns), with the date checked. Use the notes before browsing again; recheck only when they are old, the user asks, or the task is about something new.
+- **Websites:** read text and code for exact font names, HEX colors and the SVG logo. Web font files are for the web only: record the name, do not design with the file.
 
 ## Companion plugins
 
@@ -71,7 +80,7 @@ Pick where the brand lives, in this order:
 1. **Design System artifact (preferred).** If the session's artifact tool lists a "Design System" type, create the brand there: color tokens (with contrast checked), font families and type styles, spacing and radius, logos as assets, and voice and tone in its README. It is visual, the user can open and edit it, and it persists across chats. Follow the type's own instructions for its files.
 2. **brand.md (fallback).** If there is no Design System type, use the template in `references/brand-template.md`. Save it in the connected folder (desktop app) or hand it over for the user to upload to the brand's Claude Project.
 
-In both cases, also keep a short "Saved styles" section (in the design system's README, or in brand.md) and the real font names plus free fallbacks for previews. Show a short summary for the user to confirm.
+In both cases, also keep a "Sources" section (links, see above) and a short "Saved styles" section (in the design system's README, or in brand.md) and the real font names plus free fallbacks for previews. Show a short summary for the user to confirm.
 
 When proposing options (logos, font pairings), present 2 or 3 clearly labeled choices, apply one as the default, and ask the user to pick.
 
