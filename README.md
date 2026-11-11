@@ -59,7 +59,9 @@ Just talk to Claude. The right skill kicks in on its own, or type `/` to pick on
 | "Make the title 3D: inflated cream letters with drips, like this reference" | Renders the 3D title with Blender in the workspace and builds the piece around it |
 | "Create the design folder" / "add this to the design folder" / "leave this for Claude Code" | Keeps one folder per brand on your computer (rules, brand record, styles, references, pieces, pending jobs) that Claude Code can open for the heavy work |
 
-Tip: create one Claude **Project per client**.
+Tip: create one Claude **Project per client**. When something in a delivery is approximate (font, 3D, photo), Claude ends with one or two concrete ways to get closer (Adobe Fonts, Illustrator 3D and Materials, Firefly…).
+
+**Claude or Claude Code?** Use the Claude app day to day (brands, references, pieces, Figma). Use Claude Code (desktop app → Code) for heavy work on your computer: faster 3D with your GPU, your installed fonts, running the `.jsx` in Photoshop, big batches. Claude Code reads the design folder, not your Projects or chats.
 
 ### References from Instagram
 
@@ -99,18 +101,31 @@ Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, f
 
 ## Guía en español
 
-Este plugin te ayuda a diseñar piezas para tus marcas (historias, posts, flyers) con Claude: cargás la marca una vez, pedís la pieza con pocas palabras y la recibís lista para terminar en Photoshop o Figma.
+Este plugin te ayuda a diseñar piezas para tus marcas (historias, posts, flyers) con Claude: cargás la marca una vez, pedís la pieza con pocas palabras y la recibís lista para terminar en Photoshop o Figma. Vos dirigís y terminás; Claude hace lo repetitivo.
+
+> **¿Dudas?** Preguntale a Claude: "explicame cómo funciona el plugin design-with-claude" o "¿qué hace la skill X?". Te lo explica con ejemplos.
+
+### Empezá por acá (lo básico)
+
+1. Instalá el plugin (paso 1).
+2. Configurá una marca: "Configurá la marca de [cliente]" + su web o su Instagram, y si tenés, logo y tipografías.
+3. Pedí una pieza: "Diseñá una historia: 'HOY ABRIMOS TARDE', foto adjunta".
+4. Abrí el PSD, corré el `.jsx` y terminala en Photoshop (paso 5).
+
+Con eso ya ahorrás tiempo. Lo demás (carpeta de diseños, 3D, Claude Code) es para cuando quieras ir más lejos.
 
 ### 1. Instalar el plugin (una sola vez)
 
 Necesitás un plan pago de Claude (Pro, Max, Team o Enterprise).
 
-1. En Claude (web o app de escritorio), andá a **Personalizar → Plugins**.
+**En la app de Claude (web o escritorio):**
+
+1. Andá a **Personalizar → Plugins**.
 2. Tocá **Add marketplace** y pegá: `joaquinxtomas/design-w-claude`
 3. Buscá **design-with-claude** y tocá **Instalar**.
 4. En ese mismo marketplace, activá **Sync automatically** para que las mejoras te lleguen solas.
 
-**En Claude Code se instala aparte.** Lo que instalás en la app de Claude no aparece en Claude Code. Abrí una sesión de Claude Code (app de escritorio → pestaña **Code**, o la terminal) y escribí, uno por vez:
+**En Claude Code se instala aparte** (lo que instalás en la app no aparece ahí). Abrí una sesión de Claude Code (app de escritorio → pestaña **Code**) y escribí, uno por vez:
 
 ```
 /plugin marketplace add joaquinxtomas/design-w-claude
@@ -118,19 +133,17 @@ Necesitás un plan pago de Claude (Pro, Max, Team o Enterprise).
 /reload-plugins
 ```
 
-- Para actualizarlo más adelante: `/plugin marketplace update design-with-claude`.
-- Para que tome referencias de Instagram desde Claude Code: instalá la extensión **Claude in Chrome** y abrí Claude Code con `claude --chrome` (o escribí `/chrome` dentro de la sesión).
-- Claude Code no lee tus Proyectos ni chats de Claude: el contexto de cada marca va en la **carpeta de diseños** (más abajo).
+Para actualizarlo en Claude Code: `/plugin marketplace update design-with-claude`, después `/plugin update design-with-claude@design-with-claude` y `/reload-plugins`.
 
-### 2. Instalar los plugins que lo complementan (recomendado)
+### 2. Plugins que lo complementan (opcional, recomendado)
 
-El plugin funciona solo, pero **solo usa estas herramientas si las tenés instaladas**. Sin ellas, Claude hace esos pasos por su cuenta, con menos precisión.
+El plugin funciona solo, pero **si tenés estos instalados los usa** para su parte. Sin ellos, Claude hace esos pasos por su cuenta, con menos precisión.
 
 | Instalá | Dónde | Qué suma |
 | --- | --- | --- |
 | **Marketing** | Personalizar → Plugins → Discover | Escribe los textos con la voz de cada marca y planifica la semana de piezas |
 | **Design** | Personalizar → Plugins → Discover | Revisa la pieza antes de entregarla (jerarquía, contraste, legibilidad) |
-| **Adobe** | Personalizar → Plugins → Discover | Prepara fotos (color parejo, fondos, pasar a vertical), busca fuentes y genera las versiones para cada red |
+| **Adobe** | Personalizar → Plugins → Discover | Prepara fotos, busca fuentes y genera las versiones para cada red |
 | **Figma** | Configuración → Conectores | Arma las piezas directo en tu archivo de Figma |
 
 Para Adobe y Figma, la primera vez te pide iniciar sesión con tu cuenta.
@@ -141,60 +154,86 @@ Trabajá con un **Proyecto de Claude por cliente** y hablale normal:
 
 | Escribí algo como | Qué pasa |
 | --- | --- |
-| "Configurá la marca de [cliente]" + logo, colores, tipografías o aunque sea una foto | Arma el sistema de diseño de la marca (colores, letras, logo, tono) y lo guarda en Claude |
+| "Configurá la marca de [cliente]" + su web, su Instagram, logo o aunque sea una foto | Arma el sistema de diseño de la marca (colores, letras, logo, tono, links) y lo guarda en Claude |
 | "Diseñá una historia: 'HOY ABRIMOS TARDE', foto adjunta" | Diseña y te entrega PNG, PSD y el script para Photoshop |
 | "Armame las 3 historias de la semana: lunes…, miércoles…, viernes…" | Te propone los textos, espera tu OK, hace una, y cuando la aprobás hace el resto |
 | "Título más chico, oscurecé menos la foto" | Cambia solo eso |
 | "Guardá esto como estilo 'aviso de horario'" | La próxima vez alcanza con una línea: "aviso de horario, abrimos a las 12" |
 | "Quiero una historia inspirada en [una idea, textura, época o artista]" | Primero te propone una dirección de diseño; cuando la aprobás, diseña |
-| "Tomá la info de marca de [web]" / "agregá su TikTok" | Lee de la web las tipografías, colores y logo exactos, suma cada link a las fuentes de la marca y guarda lo aprendido para no volver a buscar |
-| "Configurá la marca a partir del Instagram de @cliente" | Mira el perfil, las últimas publicaciones y los destacados en tu navegador y arma la marca con eso |
-| "Tomá el diseño de la última publicación de @cliente y armá una historia para la campaña" | Saltea las fijadas, lee la última y diseña con ese estilo |
-| "Hacé el título en 3D: letras infladas color crema con gotas, como esta referencia" | Renderiza el título 3D con Blender y arma la pieza alrededor |
-| "Creá la carpeta de diseños" / "agregá esto a la carpeta" / "dejale esto a Claude Code" | Mantiene una carpeta por marca en tu compu (reglas, ficha, estilos, referencias, piezas y pendientes) que Claude Code puede abrir para el trabajo pesado |
+| "Tomá la info de marca de [web]" / "agregá su TikTok" | Lee de la web tipografías, colores y logo exactos, suma el link a las fuentes de la marca y guarda lo aprendido |
+| "Tomá el diseño de la última publicación de @cliente y armá una historia" | Saltea las fijadas, abre la última y diseña con ese estilo |
+| "Hacé el título en 3D: letras infladas con gotas, como esta referencia" | Renderiza el título 3D y arma la pieza alrededor |
+| "Creá la carpeta de diseños" / "agregá esto a la carpeta" / "dejale esto a Claude Code" | Mantiene una carpeta por marca en tu compu para que Claude Code tenga todo el contexto |
 
-#### Carpeta de diseños (para Claude Code)
+**Al final de cada entrega**, si algo quedó aproximado (una tipografía, un efecto 3D, una foto), Claude te sugiere en una o dos líneas cómo acercarte más: por ejemplo Adobe Fonts, Illustrator (3D y materiales) o Firefly.
 
-Claude Code no puede leer los Proyectos ni los chats de Claude, así que el contexto de cada marca vive en una carpeta de tu compu:
+### 4. Qué archivos recibís
+
+- **PNG**: la pieza terminada, lista para publicar.
+- **PSD**: el archivo de Photoshop con cada elemento en su capa y con nombre (Foto, Título, Logo…). Ojo: acá **los textos vienen como imagen**.
+- **Script `.jsx`**: convierte esos textos en **texto editable de verdad** (misma letra, tamaño y posición).
+- **Tipografías** (si hacen falta): los archivos de las fuentes para instalar.
+
+### 5. Terminar la pieza en Photoshop (con el `.jsx`)
+
+1. **Instalá las tipografías** (una sola vez por marca): doble clic en cada `.ttf` u `.otf` → **Instalar**. Si la fuente es de Adobe Fonts, activala desde Creative Cloud. Después cerrá y abrí Photoshop.
+2. **Abrí el PSD** en Photoshop.
+3. **Ejecutá el script**: **Archivo → Secuencias de comandos → Explorar** (en inglés: *File → Scripts → Browse*) y elegí el `.jsx`. Agrega los textos como capas editables (con el ícono **T**) y oculta las versiones en imagen.
+4. **Guardalo** con otro nombre (por ejemplo, agregando "_editable").
+5. **Ajustá lo fino**: el script no se puede probar fuera de Photoshop, así que algún texto puede quedar corrido unos píxeles. Movelo a mano.
+6. **Retocá lo que quieras**: cambiá la foto (colocala como máscara de recorte sobre la capa "Foto"), colores, sombras.
+7. **Exportá**: **Archivo → Exportar → Exportar como** → PNG o JPG, sRGB.
+8. **Contale a Claude lo que cambiaste** ("subí el título 40 px", "oscurecí la foto"): así actualiza el estilo guardado y la próxima pieza ya sale como la terminaste.
+
+**Si el script da un error**, copiá el mensaje (o sacale una foto) y pasáselo a Claude en el mismo chat. Lo más común es que falte instalar una tipografía.
+
+### 6. Para ir más lejos
+
+#### Fuentes de la marca (web, redes e inspiración)
+
+- **Todos los links juntos**, en el sistema de diseño: los de la marca (web, redes, manual), que mandan, separados de los de inspiración (solo ideas, nunca copiar). Para sumar uno: "agregá este link".
+- **Lo aprendido de cada link queda guardado** (tipografías, colores, reglas, tono, con fecha). La próxima vez que pidas inspiración de esa fuente, Claude usa lo guardado en vez de volver a buscar. Para que la revise de nuevo: "fijate si cambió".
+- **De una web**, Claude saca los nombres exactos de las tipografías, los colores y el logo en SVG. Las fuentes de una web suelen tener licencia solo para web: el nombre sirve para activarla en Adobe Fonts o pedírsela al cliente.
+
+#### Referencias desde Instagram
+
+- **Qué necesitás:** la app de escritorio con un navegador (el integrado o Claude in Chrome) donde tengas Instagram iniciado.
+- **Qué hace Claude:** solo mira. Abre cada publicación (no la grilla, para ver la imagen en buena calidad), pocas y a ritmo normal; no da me gusta, no sigue cuentas ni manda mensajes, y frena si Instagram muestra cualquier aviso.
+- **Tené en cuenta:** al abrir destacados, la marca ve que tu cuenta los vio. Lo que sale de capturas es aproximado: si tenés los archivos reales de la marca, pasáselos.
+- **Sin navegador:** mandale 3 a 5 capturas y hace lo mismo.
+
+#### Títulos 3D
+
+- **Qué sale bien:** letras infladas, gotas, plástico brillante, gelatina, caramelo. **Qué no:** gemas, vidrio y cristal realistas.
+- **Cómo funciona:** Claude dibuja las letras en plano, las "infla" y las renderiza con Blender. Entrega un PNG transparente que va como capa en el PSD.
+- **Para el mejor resultado:** una captura en buena calidad de la referencia. Si querés llevarlo más lejos, Claude te prepara los vectores para Illustrator (Efecto → 3D y materiales → Inflar).
+
+#### ¿Claude o Claude Code?
+
+- **Claude (la app, como siempre):** para el día a día. Configurar marcas, tomar referencias, diseñar piezas, Figma. Corre en la nube: podés cerrar la ventana o pedirlo desde el celular.
+- **Claude Code (app de escritorio → pestaña Code):** para el trabajo pesado en tu compu. Títulos 3D más rápidos con tu placa de video, tus tipografías instaladas, ejecutar los `.jsx` en Photoshop sin pasos manuales y muchas piezas de una.
+- **Ojo:** Claude Code no lee tus Proyectos ni chats de Claude. Por eso existe la carpeta de diseños.
+
+#### Carpeta de diseños (el puente con Claude Code)
+
+Una carpeta en tu compu con todo lo de cada marca, que Claude va actualizando:
 
 ```
 Claude Diseño/
 ├── CLAUDE.md              reglas generales (valen para todas las marcas)
-├── _plantillas/
 └── BRAVA/
     ├── CLAUDE.md          reglas fijas de la marca
-    ├── brand.md           colores, tipografías, tono, diagramación
+    ├── brand.md           colores, tipografías, tono, links de la marca
     ├── historial.md       todo lo que se fue agregando, con fecha
-    ├── pendientes-code.md trabajos que conviene hacer con Claude Code
-    ├── logos/  fuentes/  fotos/
-    ├── referencias/instagram/  referencias/cliente/
-    ├── estilos/           un .md + .png por estilo aprobado
-    ├── 3d/                configs de títulos 3D que funcionaron
+    ├── pendientes-code.md trabajos para hacer con Claude Code
+    ├── logos/  fuentes/  fotos/  estilos/  3d/
+    ├── referencias/       fuentes.md (lo aprendido de cada link), instagram/, web/, cliente/
     └── piezas/2026-11_campaña/   PNG, PSD, .jsx
 ```
 
-- **Desde Claude (app de escritorio con la carpeta conectada):** "creá la carpeta de diseños", "nueva marca: X", "agregá esto a la carpeta", "actualizá la carpeta", "dejale esto a Claude Code". Sin carpeta conectada, Claude te entrega un .zip para descomprimir ahí.
-- **Desde Claude Code:** abrí la carpeta de la marca (app de escritorio → Code) y pedí, por ejemplo, "hacé los pendientes". Ya tiene todo el contexto, usa tus tipografías y tu GPU, y puede ejecutar los `.jsx` en Photoshop.
-
-#### Títulos 3D
-
-- **Qué sale bien:** letras infladas, gotas y chorreados, plástico brillante, gelatina, caramelo. **Qué no:** gemas, vidrio y cristal.
-- **Cómo funciona:** Claude dibuja las letras (y las gotas) en plano, las "infla" y las renderiza en 3D con Blender. Tarda unos 2 o 3 minutos y entrega un PNG transparente que va como capa en el PSD.
-- **Para el mejor resultado:** pasale una captura en buena calidad de la referencia (o la publicación abierta, no la grilla). La tipografía es la gratuita más parecida.
-- **Si querés llevarlo más lejos:** Claude te sugiere al final la mejor ruta, por ejemplo Illustrator (Efecto → 3D y materiales → Inflar) sobre los vectores que te prepara, o el conector de Blender en la app de escritorio.
-
-#### Fuentes de la marca (web, redes e inspiración)
-
-- **Todos los links juntos:** en el sistema de diseño (y en `brand.md` para Claude Code) queda la lista de la web, las redes y el manual de la marca (mandan), separada de las cuentas de inspiración (solo ideas, nunca copiar). Para sumar uno: "agregá este link".
-- **Lo aprendido de cada link, guardado:** en `referencias/fuentes.md` queda una ficha por link con la fecha, las tipografías y colores (exactos si salen del código de la web), las reglas de diseño y el tono. La próxima vez que pidas inspiración de esa fuente, Claude usa la ficha en vez de volver a buscar. Si querés que la revise: "fijate si cambió".
-- **Web:** Claude lee el código para sacar los nombres exactos de las tipografías, los colores y el logo en SVG. Ojo: las fuentes de una web suelen tener licencia solo para web; el nombre sirve para activarla en Adobe Fonts o pedírsela al cliente.
-
-#### Referencias desde Instagram
-
-- **Qué necesitás:** la app de escritorio de Claude con un navegador (el integrado o Claude en Chrome) donde tengas la sesión de Instagram iniciada.
-- **Qué hace Claude:** solo mira. No da me gusta, no sigue cuentas ni manda mensajes, abre pocas publicaciones a ritmo normal y frena si Instagram muestra cualquier aviso.
-- **Tené en cuenta:** al abrir destacados, la marca ve que tu cuenta los vio. Los colores y las letras sacados de capturas son aproximados: si tenés los archivos reales de la marca, pasáselos.
-- **Sin navegador:** mandale 3 a 5 capturas de publicaciones o historias y hace lo mismo.
+- **Desde Claude (app de escritorio con la carpeta conectada):** "creá la carpeta de diseños", "nueva marca: X", "agregá esto a la carpeta", "dejale esto a Claude Code". Sin carpeta conectada, te entrega un .zip para descomprimir.
+- **Desde Claude Code:** abrí la carpeta de la marca y pedí, por ejemplo, "hacé los pendientes". Ya tiene todo el contexto.
+- **Instagram en Claude Code:** instalá la extensión **Claude in Chrome** y escribí `/chrome` dentro de la sesión.
 
 ### Comandos
 
@@ -202,40 +241,19 @@ Normalmente las skills se activan solas. Si querés asegurarte de que use una, e
 
 | Comando | Qué hace | Ejemplo |
 | --- | --- | --- |
-| `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono) como sistema de diseño en Claude, a partir de archivos o de su Instagram, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz", una florería de barrio. Usá su Instagram @raiz.flores.` |
-| `/design-with-claude:design-piece` | Diseña una pieza a partir de un pedido corto y entrega PNG + PSD con capas + `.jsx` (texto editable), o la arma en Figma | `/design-with-claude:design-piece Historia para Raíz: "LLEGARON LAS PEONÍAS". Usá la foto adjunta.` |
-| `/design-with-claude:design-folder` | Crea y actualiza la carpeta de diseños: una carpeta por marca con CLAUDE.md, brand.md, estilos, referencias, piezas y pendientes para Claude Code | `/design-with-claude:design-folder Creá la carpeta de diseños en Documentos y agregá BRAVA.` |
-| `/design-with-claude:render-3d` | Renderiza un título 3D (letras infladas, gotas, borde brillante) como PNG transparente para la pieza | `/design-with-claude:render-3d "SPOOKY CLASS", letras crema con gotas sobre base roja brillante, como el post adjunto.` |
-| `/design-with-claude:design-from-ideas` | ¿Sin referencia? Convierte una idea (textura, época, artista, sensación) en una dirección de diseño, espera tu OK y después diseña | `/design-with-claude:design-from-ideas Una historia inspirada en los carteles de cine de los 70 para la liquidación de verano.` |
+| `/design-with-claude:brand-setup` | Configura una marca (colores, tipografías, logo, tono, links) a partir de archivos, su web o su Instagram, o guarda un estilo aprobado | `/design-with-claude:brand-setup Configurá la marca de "Raíz" con su web raizflores.com y su Instagram @raiz.flores.` |
+| `/design-with-claude:design-piece` | Diseña una pieza a partir de un pedido corto y entrega PNG + PSD + `.jsx`, o la arma en Figma | `/design-with-claude:design-piece Historia para Raíz: "LLEGARON LAS PEONÍAS". Usá la foto adjunta.` |
+| `/design-with-claude:design-from-ideas` | Convierte una idea (textura, época, artista, sensación) en una dirección de diseño, espera tu OK y diseña | `/design-with-claude:design-from-ideas Historia inspirada en los carteles de cine de los 70.` |
+| `/design-with-claude:render-3d` | Hace un título 3D (letras infladas, gotas, borde brillante) para la pieza | `/design-with-claude:render-3d "SPOOKY CLASS", letras crema con gotas sobre base roja, como el post adjunto.` |
+| `/design-with-claude:design-folder` | Crea y actualiza la carpeta de diseños para Claude Code | `/design-with-claude:design-folder Creá la carpeta de diseños en Documentos y agregá BRAVA.` |
 
-Comandos útiles del plugin **Marketing** (si lo tenés instalado):
+Del plugin **Marketing** (si lo tenés):
 
 | Comando | Qué hace | Ejemplo |
 | --- | --- | --- |
-| `/marketing:campaign-plan` | Planifica una campaña o la semana de contenido | `/marketing:campaign-plan Semana de lanzamiento del primer drop del 11/11.` |
-| `/marketing:draft-content` | Escribe los textos de una pieza con la voz de la marca | `/marketing:draft-content Textos para 3 historias que anuncian el drop.` |
+| `/marketing:campaign-plan` | Planifica una campaña o la semana de contenido | `/marketing:campaign-plan Semana de lanzamiento del drop del 11/11.` |
+| `/marketing:draft-content` | Escribe los textos de una pieza con la voz de la marca | `/marketing:draft-content Textos para 3 historias del drop.` |
 | `/marketing:brand-review` | Revisa que los textos respeten la voz de la marca | `/marketing:brand-review Revisá estos 3 títulos.` |
-
-### 4. Qué archivos recibís
-
-- **PNG**: la pieza terminada, lista para publicar.
-- **PSD**: el archivo de Photoshop con cada elemento en su capa y con nombre (Foto, Título, Logo…). Ojo: acá **los textos vienen como imagen**.
-- **Script `.jsx`**: convierte esos textos en **texto editable de verdad** (con la misma letra, tamaño y posición).
-- **Tipografías** (si hacen falta): los archivos de las fuentes para instalar.
-
-### 5. Terminar la pieza en Photoshop (con el `.jsx`)
-
-1. **Instalá las tipografías** (una sola vez por marca): doble clic en cada archivo `.ttf` u `.otf` → **Instalar**. Si la fuente es de Adobe Fonts, activala desde Creative Cloud. Después cerrá y abrí Photoshop.
-2. **Poné todo en una carpeta**: los PSD, el `.jsx` y, si vino un `.zip`, descomprimilo ahí mismo.
-3. **Ejecutá el script**: en Photoshop, **Archivo → Secuencias de comandos → Explorar** (en inglés: *File → Scripts → Browse*), elegí el `.jsx` y, si te lo pide, la carpeta con los PSD.
-4. **Abrí las copias nuevas**: el script guarda cada PSD con **"_editable"** en el nombre. Ahí los textos tienen el ícono **T** en el panel de capas y se editan con doble clic. Las versiones en imagen quedan ocultas.
-5. **Ajustá lo fino**: el script no se puede probar fuera de Photoshop, así que algún texto puede quedar corrido unos píxeles. Movelo a mano.
-6. **Retocá lo que quieras**: cambiá la foto (colocá la nueva y usala como máscara de recorte sobre la capa "Foto"), colores, sombras.
-7. **Exportá**: **Archivo → Exportar → Exportar como** → PNG o JPG, 1080×1920, sRGB.
-8. **Publicá** y poné los stickers de Instagram (link, recordatorio) en el espacio que la historia deja libre.
-9. **Contale a Claude lo que cambiaste** ("subí el título 40 px", "oscurecí la foto"): así actualiza el estilo guardado y la próxima pieza ya sale como la terminaste.
-
-**Si el script da un error**, copiá el mensaje (o sacale una foto) y pasáselo a Claude en el mismo chat. Lo más común es que falte instalar una tipografía.
 
 ## Changelog
 
