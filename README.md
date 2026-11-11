@@ -91,9 +91,11 @@ Useful commands from the companion **Marketing** plugin (if installed):
 
 | Skill | Purpose |
 | --- | --- |
-| `brand-setup` | Brand kit as a Design System artifact (or `brand.md`): logo, fonts, colors, tone, saved styles |
+| `brand-setup` | Brand kit as a Design System artifact (or `brand.md`): logo, fonts, colors, tone, links and source notes, saved styles; from files, the website or Instagram |
 | `design-piece` | From brief to piece: PNG, layered PSD, Photoshop `.jsx` with editable text, or Figma frame |
 | `design-from-ideas` | No exact reference: turns textures, eras, artists or feelings into a design direction |
+| `render-3d` | Inflated 3D titles (drips, glossy rim) rendered with Blender, as a transparent PNG layer |
+| `design-folder` | One folder per brand on your computer (rules, brand record, sources, styles, pieces, pending jobs) so Claude Code has the full context |
 
 Connectors: Figma (design directly in a Figma file) and Adobe (prepare photos, find fonts, resize for each channel).
 
